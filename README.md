@@ -1,12 +1,43 @@
-# program:      Calculator
-- desc:         A calculator using a python dictionary; 
-                operations with 2 numbers
-- programmer:   trpl-A
-- started:      18.09.23
-- updated:      18.09.23
-- status:       COMPLETE; connected to github repo
+# Program:      File organiser
+> Description:  A Python script used to organise files, 
+                especially in the "Downloads" folder
+- Programmer:   ammaar0x01
+- Started:      14.04.24
+- Updated:      12.12.24
+- Status:       COMPLETED
+---
 
-More notes
-==========
-calc.py         -> the best response to the problem; the best solution
-<end>
+## Introduction
+- run the script in a folder (directory) that you want to organise
+---
+
+## Project structure
+```plaintext
+Py_File_organiser/
+|── controlled_env/                
+│   ├── (random files...)
+└── .gitignore 
+└── Organise.py
+└── README.md               
+```
+---
+
+## Pre-requisites
+- Python installed
+---
+
+## Download and installation
+- 
+---
+
+## Using the project/ running the program
+- 
+---
+
+## Contribution guidelines
+- 
+---
+
+## More notes
+- 
+---
