@@ -5,8 +5,9 @@ import shutil
 class Organise():
     """
     Program: File organiser
+    Developer: ammaar0x01
     Started: 14.04.24
-    Updated: 12.12.24
+    Updated: 13.12.24
     
     Paste and run this script in the folder that you want to organise
     
@@ -76,16 +77,23 @@ class Organise():
         Prints all the files and folders from a parent directory to a text file
         '''
         with open("_all_files.tmp", "w") as backup:
-            backup.write(f"All files and folders from \n{self._CURRENT_DIR}\n")
-            backup.write(40 * "=")
-            backup.write("\n")
-            for file in self._ALL_FILES:
-                backup.write(f"- {file}\n")
-                             
-            backup.write(40 * "=")
-            backup.write(f"\nTotal number of files and folders: {len(self._ALL_FILES)}\n")
-            backup.write(40 * "=")
-            backup.close()
+            try: 
+                backup.write(f"All files and folders from \n{self._CURRENT_DIR}\n")
+                backup.write(40 * "=")
+                backup.write("\n")
+                for file in self._ALL_FILES:
+                    backup.write(f"- {file}\n")
+                                
+                backup.write(40 * "=")
+                
+            except UnicodeEncodeError as unicode_err:
+                print(unicode_err) 
+                backup.write(f"- <file with strange characters>\n")
+                
+            finally:
+                backup.write(f"\nTotal number of files and folders: {len(self._ALL_FILES)}\n")
+                backup.write(40 * "=")
+                backup.close()
     # ----------------------------------------    
 
     def _move_file(self, filename, file_extension, dest_dir) -> None: 
